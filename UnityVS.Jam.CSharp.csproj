@@ -75,11 +75,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Bullet.cs" />
-    <Compile Include="Assets\Camera.cs" />
     <Compile Include="Assets\Check.cs" />
     <Compile Include="Assets\Enemy.cs" />
     <Compile Include="Assets\Gun.cs" />
     <Compile Include="Assets\Hero.cs" />
+    <Compile Include="Assets\MainCamera.cs" />
     <Compile Include="Assets\Spawn.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />

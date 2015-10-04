@@ -7,6 +7,8 @@ public class Check : MonoBehaviour {
     {
         if (other.tag == "Ground")
         {
+            if (other.transform.position.y + 0.5f >= transform.position.y)
+                return;
             transform.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
             transform.GetComponent<Rigidbody2D>().isKinematic = true;
             Debug.Log("ops");

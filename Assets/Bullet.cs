@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour {
                 return;
             }
         Debug.Log("boom!");
-        Camera.isShake = true;
+        MainCamera.isShake = true;
         Destroy(gameObject);
         Destroy(this);
     }

@@ -55,9 +55,10 @@ public class Enemy : MonoBehaviour {
 
     void Death()
     {
-        Camera.isShake = true;
         if (isDeath)
-            return; 
+            return;
+        GetComponent<SpriteRenderer>().color = Color.gray;
+        MainCamera.isShake = true;
         LayerMask.NameToLayer("BackGround");
         speed = 0;
         GetComponent<Collider2D>().isTrigger = true;

@@ -19,7 +19,7 @@ public class Gun : MonoBehaviour {
     float fireSpeed = 0.1f;
     float fireSpeedTimer = 0;
     float backTimer = 0;
-    float fireTimer = 0;
+    public float fireTimer = 0;
     float fireTimer2 = 0;
     public void ChangDrt(int drt)
     {
@@ -41,6 +41,7 @@ public class Gun : MonoBehaviour {
                 {
                     backTimer = 0;
                     transform.position -= new Vector3(drt * 0.3f * fireTimer, 0.2f * fireTimer, 0);
+                    
                 }
                 fireTimer += 0.2f;
                 if (fireTimer > 1)
@@ -74,6 +75,7 @@ public class Gun : MonoBehaviour {
 
     void Shoot()
     {
+        MainCamera.isFireS = true;
         GameObject bullet = Instantiate(Resources.Load("Bullet") as GameObject);
         GameObject shell = Instantiate(Resources.Load("Shell") as GameObject);
         shell.transform.position = transform.position - new Vector3(drt * 0.2f, 0, 0);
